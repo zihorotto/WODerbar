@@ -1,4 +1,4 @@
-package com.wodebar;
+package com.woderbar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WoderbarApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WoderbarApplicationbar.class, args);
+		SpringApplication.run(WoderbarApplication.class, args);
 	}
 
 }
