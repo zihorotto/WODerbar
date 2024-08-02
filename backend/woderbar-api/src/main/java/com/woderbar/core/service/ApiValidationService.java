@@ -3,6 +3,8 @@ package com.woderbar.core.service;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.woderbar.core.config.CognitoConfiguration;
 import com.woderbar.core.util.CognitoUtil;
+import com.woderbar.domain.exception.WoderbarException;
+import com.woderbar.domain.type.ErrorType;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -16,7 +18,6 @@ import java.util.Date;
 public class ApiValidationService {
 
     private static final String TOKEN_USE_ACCESS = "access";
-
     private final CognitoUtil cognitoUtil;
     private final CognitoConfiguration cognitoConfiguration;
 

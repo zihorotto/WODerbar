@@ -13,6 +13,7 @@ import com.nimbusds.jwt.proc.ConfigurableJWTProcessor;
 import com.nimbusds.jwt.proc.DefaultJWTProcessor;
 import com.woderbar.core.config.CognitoConfiguration;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.net.MalformedURLException;
@@ -23,6 +24,7 @@ import java.util.Date;
 
 @AllArgsConstructor
 @Component
+@Lazy
 public class CognitoUtil {
 
     private static final String CLAIM_CLIENT_ID = "client_id";

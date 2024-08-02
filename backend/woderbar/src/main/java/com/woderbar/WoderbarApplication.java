@@ -3,11 +3,11 @@ package com.woderbar;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.woderbar")
 public class WoderbarApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(WoderbarApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(WoderbarApplication.class, args);
+    }
 
 }

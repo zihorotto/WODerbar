@@ -1,0 +1,89 @@
+INTERNAL_SERVER_ERROR:
+  code: MEDALYST-0500
+  status: 500
+  message: Unknown error occurred
+UNAUTHORIZED_ERROR:
+  code: MEDALYST-0401
+  status: 401
+  message: Unauthorized
+FORBIDDEN_ERROR:
+  code: MEDALYST-0403
+  status: 403
+  message: Access Denied
+BAD_REQUEST_ERROR:
+  code: MEDALYST-0400
+  status: 400
+  message: Bad Request
+
+NO_APP_VERSION_PRESENT_ERROR:
+  code: MEDALYST-0001
+  status: 400
+  message: Missing app version header
+INCOMPATIBLE_APP_VERSION_ERROR:
+  code: MEDALYST-0002
+  status: 400
+  message: The application needs to be updated
+CLUB_NOT_FOUND_ERROR:
+  code: MEDALYST-0003
+  status: 404
+  message: Club cannot be found with the given request
+ACTIVE_SEASON_NOT_FOUND_ERROR:
+  code: MEDALYST-0004
+  status: 404
+  message: Club does not have any active season
+SEASON_NOT_FOUND_ERROR:
+  code: MEDALYST-0005
+  status: 404
+  message: Season cannot be found with the given request
+TEAM_NOT_FOUND_ERROR:
+  code: MEDALYST-0006
+  status: 404
+  message: Team cannot be found with the given request
+START_DATE_ERROR:
+  code: MEDALYST-0007
+  status: 400
+  message: Start date cannot be before tomorrow
+END_DATE_ERROR:
+  code: MEDALYST-0008
+  status: 400
+  message: End date cannot be before start date
+DATE_TAKEN_ERROR:
+  code: MEDALYST-0009
+  status: 409
+  message: Date already taken
+SPORT_NOT_FOUND_ERROR:
+  code: MEDALYST-0010
+  status: 404
+  message: Sport cannot be found with the given request
+CURRENCY_NOT_FOUND_ERROR:
+  code: MEDALYST-0011
+  status: 404
+  message: Currency cannot be found with the given request
+EMAIL_TAKEN_ERROR:
+  code: MEDALYST-0012
+  status: 409
+  message: Email already registered
+ATHLETE_NOT_FOUND_ERROR:
+  code: MEDALYST-0013
+  status: 404
+  message: Athlete cannot be found with the given request
+FILE_CONTAINER_TYPE_ERROR:
+  code: MEDALYST-0014
+  status: 400
+  message: File container type is unknown
+TEAM_BAD_REQUEST_ERROR:
+  code: MEDALYST-0015
+  status: 400
+  message: Teams cannot be found with the given request
+ATHLETE_BAD_REQUEST_ERROR:
+  code: MEDALYST-0016
+  status: 400
+  message: Athletes cannot be found with the given request
+TEAM_ASSIGMENT_BAD_REQUEST_ERROR:
+  code: MEDALYST-0017
+  status: 400
+  message: At least one team must be selected
+TEAM_NAME_ERROR:
+  code: MEDALYST-0018
+  status: 400
+  message: Team name is required and must be unique within a season

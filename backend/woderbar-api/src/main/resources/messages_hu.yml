@@ -1,0 +1,89 @@
+INTERNAL_SERVER_ERROR:
+  code: MEDALYST-0500
+  status: 500
+  message: Ismeretlen hiba történt
+UNAUTHORIZED_ERROR:
+  code: MEDALYST-0401
+  status: 401
+  message: Illetéktelen hozzáférés
+FORBIDDEN_ERROR:
+  code: MEDALYST-0403
+  status: 403
+  message: Hozzáréfés megtiltva
+BAD_REQUEST_ERROR:
+  code: MEDALYST-0400
+  status: 400
+  message: A kérés nem megfelelő
+
+NO_APP_VERSION_PRESENT_ERROR:
+  code: MEDALYST-0001
+  status: 400
+  message: Hiányzó app version header
+INCOMPATIBLE_APP_VERSION_ERROR:
+  code: MEDALYST-0002
+  status: 400
+  message: Az alkalmazás frissitése szükséges
+CLUB_NOT_FOUND_ERROR:
+  code: MEDALYST-0003
+  status: 404
+  message: A keresett Club nem található
+ACTIVE_SEASON_NOT_FOUND_ERROR:
+  code: MEDALYST-0004
+  status: 404
+  message: A club nem rendelkezik aktív szezonnal
+SEASON_NOT_FOUND_ERROR:
+  code: MEDALYST-0005
+  status: 404
+  message: A keresett szezon nem található
+TEAM_NOT_FOUND_ERROR:
+  code: MEDALYST-0006
+  status: 404
+  message: A keresett csapat nem található
+START_DATE_ERROR:
+  code: MEDALYST-0007
+  status: 400
+  message: A kezdés dátuma nem lehet korábbi a holnapi napnál
+END_DATE_ERROR:
+  code: MEDALYST-0008
+  status: 400
+  message: A végzés dátuma nem lehet korábbi a kezdés dátumánál
+DATE_TAKEN_ERROR:
+  code: MEDALYST-0009
+  status: 409
+  message: A dátum már foglalt
+SPORT_NOT_FOUND_ERROR:
+  code: MEDALYST-0010
+  status: 404
+  message: A keresett sport nem található
+CURRENCY_NOT_FOUND_ERROR:
+  code: MEDALYST-0011
+  status: 404
+  message: A keresett valuta nem található
+EMAIL_TAKEN_ERROR:
+  code: MEDALYST-0012
+  status: 409
+  message: A megadott email már regisztrált
+ATHLETE_NOT_FOUND_ERROR:
+  code: MEDALYST-0013
+  status: 404
+  message: A keresett sportoló nem található
+FILE_CONTAINER_TYPE_ERROR:
+  code: MEDALYST-0014
+  status: 400
+  message: File container típus ismeretlen
+TEAM_BAD_REQUEST_ERROR:
+  code: MEDALYST-0015
+  status: 400
+  message: A keresett csapatok nem találhatók
+ATHLETE_BAD_REQUEST_ERROR:
+  code: MEDALYST-0016
+  status: 400
+  message: A keresett sportolók nem találhatók
+TEAM_ASSIGMENT_BAD_REQUEST_ERROR:
+  code: MEDALYST-0017
+  status: 400
+  message: Legalább egy csapatot ki kell választani
+TEAM_NAME_ERROR:
+  code: MEDALYST-0018
+  status: 400
+  message: A szezonban egyedi csapat név megadása kötelező

@@ -5,13 +5,13 @@ import com.woderbar.core.model.security.UserPrincipal;
 import com.woderbar.core.service.ApiValidationService;
 import com.woderbar.core.service.CustomUserDetailsService;
 import com.woderbar.core.util.CognitoUtil;
-import hu.medalyst.core.business.exception.MedalystException;
-import hu.medalyst.core.business.type.ErrorType;
+import com.woderbar.domain.exception.WoderbarException;
+import com.woderbar.domain.type.ErrorType;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -20,14 +20,27 @@ import org.springframework.util.StringUtils;
 
 import java.io.IOException;
 
-/
-@AllArgsConstructor
 @Component
 public class TokenFilter extends BaseSecurityFilter {
 
-    private final ApiValidationService validationService;
-    private final CustomUserDetailsService customUserDetailsService;
-    private final CognitoUtil cognitoUtil;
+    private ApiValidationService validationService;
+    private CustomUserDetailsService customUserDetailsService;
+    private CognitoUtil cognitoUtil;
+
+    @Autowired
+    public void setValidationService(ApiValidationService validationService) {
+        this.validationService = validationService;
+    }
+
+    @Autowired
+    public void setCustomUserDetailsService(CustomUserDetailsService customUserDetailsService) {
+        this.customUserDetailsService = customUserDetailsService;
+    }
+
+    @Autowired
+    public void setCognitoUtil(CognitoUtil cognitoUtil) {
+        this.cognitoUtil = cognitoUtil;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,

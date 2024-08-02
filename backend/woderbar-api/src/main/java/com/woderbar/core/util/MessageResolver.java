@@ -1,5 +1,6 @@
 package com.woderbar.core.util;
 
+import com.woderbar.core.model.exception.ErrorApiResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
@@ -17,12 +18,12 @@ public class MessageResolver {
 
     private final MessageSource messageSource;
 
-   // public ErrorApiResponse getErrorApiResponseByMessageKeyPrefix(String messageKeyPrefix) {
-  //      return new ErrorApiResponse(
-     //           getCodeByCodeKeyPrefix(messageKeyPrefix),
-     //           getStatusByStatusKeyPrefix(messageKeyPrefix),
-    //            getMessageByMessageKeyPrefix(messageKeyPrefix));
-   // }
+    public ErrorApiResponse getErrorApiResponseByMessageKeyPrefix(String messageKeyPrefix) {
+        return new ErrorApiResponse(
+                getCodeByCodeKeyPrefix(messageKeyPrefix),
+                getStatusByStatusKeyPrefix(messageKeyPrefix),
+                getMessageByMessageKeyPrefix(messageKeyPrefix));
+    }
 
     public String getCodeByCodeKeyPrefix(String messageKeyPrefix) {
         return getStringByKey(messageKeyPrefix + CODE_POST_FIX, LocaleContextHolder.getLocale());

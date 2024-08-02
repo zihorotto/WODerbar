@@ -1,5 +1,6 @@
 package com.woderbar.core.security;
 
+import com.woderbar.domain.exception.WoderbarException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -28,7 +29,7 @@ public class FilterChainExceptionHandler extends OncePerRequestFilter {
                                     FilterChain filterChain) throws ServletException, IOException {
         try {
             filterChain.doFilter(request, response);
-        } catch (WoderberException e) {
+        } catch (WoderbarException e) {
             resolver.resolveException(request, response, null, e);
         } catch (Throwable e) {
             log.error("Unknown Exception occurred", e);
