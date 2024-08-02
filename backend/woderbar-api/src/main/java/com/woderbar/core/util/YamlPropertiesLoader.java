@@ -6,12 +6,7 @@ import org.springframework.core.io.InputStreamResource;
 import org.springframework.util.PropertiesPersister;
 import org.springframework.util.StringUtils;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
+import java.io.*;
 import java.util.Objects;
 import java.util.Properties;
 
